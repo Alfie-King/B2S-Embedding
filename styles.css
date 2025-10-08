@@ -1,0 +1,110 @@
+/* === Modern, Sleek, and Sexy Centered Tableau Embed === */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+:root {
+  --bg-color: #0d1117;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --accent: #00bcd4;
+  --text-color: #e6edf3;
+  --border-color: rgba(255, 255, 255, 0.15);
+  --button-hover: rgba(0, 188, 212, 0.15);
+  --transition: all 0.25s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+legend {
+  font-weight: 600;
+  color: var(--accent);
+  padding: 0 1rem;
+}
+
+input[type="button"] {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+input[type="button"]:hover {
+  background: var(--button-hover);
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+  transform: translateY(-2px);
+}
+
+/* === Tableau Embed Centering === */
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+tableau-viz {
+  width: 850px;
+  height: 850px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--border-color);
+}
+
+/* Smooth page fade-in */
+body {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
